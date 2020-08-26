@@ -70,12 +70,15 @@ class product extends React.Component {
                         </Fab>
                     </div>
                     
+                    
                         
                 </div>
                 
-                   
-                    
+        
             </div>
+            
+            
+            
             
             
         )
