@@ -21,16 +21,16 @@ class product extends React.Component {
     } 
 
     handleIncrease() {
-        this.props.increase()
+        this.props.dispatch(increaseProduct(this.props.item.id))
         console.log(' you clicked on +' )
 
     }
     handleDecrease(){
-        this.props.decrease()
+        this.props.dispatch(decreaseProduct(this.props.item.id))
         console.log(' you clicked on -' )
     }
     handlereset(){
-        this.props.reset()
+        this.props.dispatch(resetProduct(this.props.item.id))
     }
 
     componentDidMount() {
@@ -81,11 +81,8 @@ class product extends React.Component {
         )
     }
 }
+const mapDispatchToProps = (dispatch) => ({
+    dispatch: dispatch
+  })
 
-const actionCreators = {
-	increase: increaseProduct,
-	decrease: decreaseProduct,
-	reset: resetProduct
-}
-
-export default connect(null, actionCreators)(product)
+export default connect(mapDispatchToProps)(product)

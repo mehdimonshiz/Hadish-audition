@@ -3,7 +3,7 @@ import { withRouter } from 'react-router'
 import Product from './product'
 import axios from 'axios'
 import { connect } from "react-redux";
-import {getProduct}  from '../src/action/product-action';
+import {getProducts}  from './action/product-action';
 
 
 
@@ -14,12 +14,16 @@ class productList extends React.Component {
       
     }
     componentDidMount(){
-        this.props.getProduct();
+        axios.get('https://run.mocky.io/v3/af969961-f71f-442b-89ee-409c28fc6d05')
+        .then((response) => {
+        this.props.dispatch(getProducts(response.data.products));
+      })    
+
     }
     render () {
         return(
             <div className='container'>{
-               this.props.products && this.props.products.map(i => <Product item ={i}/>)
+               this.props.products && this.props.products.map(i => i!==null && <Product item ={i}/>)
             }</div>
             
         )
@@ -31,8 +35,8 @@ function mapState(state) {
 	return { products }
 }
 
-const actionCreators = {
-	getProduct: getProduct
-}
+const mapDispatchToProps = (dispatch) => ({
+    dispatch: dispatch
+  })
 
-export default connect(mapState, actionCreators)(productList)
+export default connect(mapState, mapDispatchToProps)(productList)
