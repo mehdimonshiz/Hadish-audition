@@ -81,7 +81,12 @@ justify-content: start;
    flex-direction: row;
 }
 .control{
+  background-color: rgb(152, 199, 182);
+  padding: 2vh;
+  height: 20vh;
+  border-radius: 2vh;
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
 }
 .addButton{
