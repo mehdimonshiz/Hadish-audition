@@ -33,7 +33,7 @@
   align-items: center;
 }
 .product{
-  background-color: rgb(178, 206, 195);
+  background-color: rgb(193, 207, 202);
   color: rgb(0, 15, 56);
   border-radius: 0px 15px 1px 15px ;
   border-style: groove;
@@ -67,7 +67,7 @@
    flex-direction: row;
 }
 .p-count{
-background-color: rgb(202, 221, 213);
+background-color: rgba(206, 211, 209, 0.842);
 flex-direction: row;
 border-radius: 10px;
 padding: 10px;

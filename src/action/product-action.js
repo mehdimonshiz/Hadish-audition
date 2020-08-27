@@ -21,12 +21,3 @@ export  function getProducts(data) {
 }
 
    
-// export function getProduct() {
-//     return function action(dispatch) {
-//       dispatch({ type: 'GET_PRODUCT' })
-  
-//       return axios.get('https://run.mocky.io/v3/af969961-f71f-442b-89ee-409c28fc6d05', fdata)
-//       .then((response) => dispatch({type:'GET_PRODUCT', products: response.data.products})
-
-//     }
-//   }
